@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #5F9595;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+.header{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    text-shadow: 3px 3px 9px #C4D7D1;
+    margin: 0 1rem 1rem;
+    padding: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(4, 2fr);
+    grid-auto-rows: 300px;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+.content{
+    border-radius: 20px;
+    box-shadow: #C4D7D1 5px 5px 15px;
+    background-color: #C4D7D1;
+    color: #FFB6A3;
+    transition: all 1s;
+}
+.modest{
+    grid-column: span 2;
+}
+.content a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #5F9595;
+    text-shadow: #5F9595;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.content p {
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 35px;
+}
+.content h3 {
+    font-size: 24px;
+}
+.shoe{
+    grid-column: span 2;
+}
+.content a img {
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+    height: 70%;
+}
+.content:hover {
+    scale: 1.1;
+}
+footer {
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    font-size: x-large;
+    text-shadow: 4px;
+}
+
+
+@media (max-width: 1200px) {
+.container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    }
+.modest,
+.shoe{
+    grid-column: span 1;
+}
+}
+  
+@media (max-width: 768px) {
+.container{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    }
+.content1,
+.content6{
+    grid-column: span 1;
+    }
+}
